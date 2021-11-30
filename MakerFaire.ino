@@ -34,13 +34,13 @@ void loop() {
   */
   //determine current direction
   int dir = 0;
-  if (sb1 == HIGH && prev_dir != 1 && prev_dir != 5)
+  if (sb1 == HIGH && prev_dir != 1 && prev_dir != 4)
     dir = 1; //right
-  if (sb2 == HIGH && prev_dir != 2 && prev_dir != 5)
+  if (sb2 == HIGH && prev_dir != 2 && prev_dir != 3)
     dir = 2; //down
-  if (sb3 == HIGH && prev_dir != 3 && prev_dir != 5)
+  if (sb3 == HIGH && prev_dir != 3 && prev_dir != 2)
     dir = 3; //up
-  if (sb4 == HIGH && prev_dir != 4 && prev_dir != 5)
+  if (sb4 == HIGH && prev_dir != 4 && prev_dir != 1)
     dir = 4; //left
 
   if (dir == 0)
