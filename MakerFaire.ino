@@ -1,5 +1,3 @@
-//#include <LiquidCrystal.h>
-//LiquidCrystal lcd();
 const int b1 = 2; //button 1
 const int b2 = 3; //button 2
 const int b3 = 4; //button 3
@@ -13,7 +11,7 @@ int prev_dir = 0; //previous direction
 
 void setup() {
   Serial.begin(9600);
-  
+
   //initialize button pins
   pinMode(b1, INPUT);
   pinMode(b2, INPUT);
@@ -27,11 +25,7 @@ void loop() {
   sb2 = digitalRead(b2);
   sb3 = digitalRead(b3);
   sb4 = digitalRead(b4);
-  /*
-  //reads score value
-  if (Serial.available()) //if data is available to read
-    
-  */
+  
   //determine current direction
   int dir = 0;
   if (sb1 == HIGH && prev_dir != 1 && prev_dir != 4)
@@ -49,7 +43,6 @@ void loop() {
     prev_dir = dir; //if new direction is inputted, use new direction
 
   Serial.println(dir);
-
 
   delay(1);
 }

@@ -1,7 +1,6 @@
 import processing.serial.*;
 Serial myPort;
 String val;
-int score = 0;
 
 void setup() {
   //fullScreen();
@@ -15,7 +14,6 @@ void setup() {
 void draw() {
   if (myPort.available() > 0) {
     val = myPort.readString(); //read input from arduino (the println statement)
-    //myPort.write(score); //send score to arduino
   }
   println(val);
 }
