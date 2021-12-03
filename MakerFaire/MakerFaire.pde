@@ -23,10 +23,7 @@ int value = -1;
 
 
 void setup() {
-<<<<<<< HEAD
-=======
   //fullScreen();
->>>>>>> f33a62947e9a503baddd7f359c546dba6534dc4d
   
   snake = new SnakeComponent();
   
@@ -42,9 +39,7 @@ void setup() {
 
 void draw() {
   if (myPort.available() > 0) {
-<<<<<<< HEAD
     val = myPort.readStringUntil('\n'); //read input from arduino (the println statement)
-    myPort.write(score); //send score to arduino
   }
   //println(val);
   
@@ -85,8 +80,6 @@ class SnakeComponent extends JComponent
   
   int getSnakeY(){
     return (int) snake.getY();
-=======
     val = myPort.readString(); //read input from arduino (the println statement)
->>>>>>> f33a62947e9a503baddd7f359c546dba6534dc4d
   }
 }
