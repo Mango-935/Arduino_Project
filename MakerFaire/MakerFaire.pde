@@ -35,6 +35,10 @@ final JLabel gameOverText = new JLabel ("Game Over, Rerun the program to play ag
 KeyListener keyListenerTest = new SnakeMoveListener();
 
 void setup() {
+<<<<<<< HEAD
+=======
+  //fullScreen();
+>>>>>>> 422067c907a052c0d7ff905df354d341f768b491
   
   game = new GameComponent();
   
@@ -277,6 +281,7 @@ class GameComponent extends JComponent
   } 
   
   int getSnakeY(){
+<<<<<<< HEAD
     return (int) theSnake.get(0).getY();
   }
   
@@ -286,6 +291,10 @@ class GameComponent extends JComponent
   
   int getFoodY(){
    return (int) food.getY(); 
+=======
+    return (int) snake.getY();
+    val = myPort.readString(); //read input from arduino (the println statement)
+>>>>>>> 422067c907a052c0d7ff905df354d341f768b491
   }
 }
 
